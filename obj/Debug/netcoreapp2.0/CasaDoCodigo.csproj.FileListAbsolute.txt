@@ -1,0 +1,10 @@
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/bin/Debug/netcoreapp2.0/CasaDoCodigo.deps.json
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/bin/Debug/netcoreapp2.0/CasaDoCodigo.runtimeconfig.json
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/bin/Debug/netcoreapp2.0/CasaDoCodigo.runtimeconfig.dev.json
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/bin/Debug/netcoreapp2.0/CasaDoCodigo.dll
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/bin/Debug/netcoreapp2.0/CasaDoCodigo.pdb
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/obj/Debug/netcoreapp2.0/CasaDoCodigo.csproj.CoreCompileInputs.cache
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/obj/Debug/netcoreapp2.0/CasaDoCodigo.AssemblyInfoInputs.cache
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/obj/Debug/netcoreapp2.0/CasaDoCodigo.AssemblyInfo.cs
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/obj/Debug/netcoreapp2.0/CasaDoCodigo.dll
+/home/filipe/Documentos/Projetos/ASP dotNet Core/CasaDoCodigo/obj/Debug/netcoreapp2.0/CasaDoCodigo.pdb

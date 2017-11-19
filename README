@@ -1,0 +1,28 @@
+Conexão do SQLite
+--------------------------------------------------------------------------------------------
+Pacotes necessarios:
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+--------------------------------------------------------------------------------------------
+No arquivo Startup.cs, adicionar o seguinte dentro do metódo ConfigureServices
+
+var connection = Configuration["ConexaoSqlite:SqliteConnectionString"];
+            services.AddDbContext<Contexto>(options =>
+                options.UseSqlite(connection)
+            );
+--------------------------------------------------------------------------------------------
+Adicionar no arquivo appsettings.json, a string de conexão.
+"ConexaoSqlite": {
+        "SqliteConnectionString": "Data Source=CasaDoCodigo.db"
+  },
+--------------------------------------------------------------------------------------------
+Dentro do contexto adicionar
+public Contexto(DbContextOptions<Contexto> options) : base(options)
+        {
+        }
+--------------------------------------------------------------------------------------------
+Para a migração utilizar os codigos no CLI
+dotnet ef migrations add Message
+dotnet ef database update
+--------------------------------------------------------------------------------------------
