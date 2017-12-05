@@ -1,3 +1,13 @@
+Projeto do Curso de ASP Dot Net Core da ALURA
+Projeto MVC
+Tecnologias:
+ASP.Net Core 2
+EntityFramework Core 2
+SQLite
+Boostrap
+HTML
+CSS
+
 Conexão do SQLite
 --------------------------------------------------------------------------------------------
 Pacotes necessarios:
