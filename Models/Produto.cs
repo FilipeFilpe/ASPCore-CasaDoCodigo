@@ -1,12 +1,14 @@
 using System;
+using System.Runtime.Serialization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CasaDoCodigo.Models
 {
-    public class Produto
+    public class Produto : BaseModel
     {
-        public int Id { get; set; }
+        [DataMember]
         public string Nome { get; set; }
+        [DataMember]
         public decimal Preco { get; set; }
 
         public Produto()

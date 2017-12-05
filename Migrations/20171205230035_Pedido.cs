@@ -4,10 +4,22 @@ using System.Collections.Generic;
 
 namespace CasaDoCodigo.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Pedido : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Pedidos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pedidos", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Produtos",
                 columns: table => new
@@ -28,6 +40,7 @@ namespace CasaDoCodigo.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    PedidoId = table.Column<int>(nullable: true),
                     PrecoUnitario = table.Column<decimal>(nullable: false),
                     ProdutoId = table.Column<int>(nullable: true),
                     Quantidade = table.Column<int>(nullable: false)
@@ -36,12 +49,23 @@ namespace CasaDoCodigo.Migrations
                 {
                     table.PrimaryKey("PK_ItensPedido", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_ItensPedido_Pedidos_PedidoId",
+                        column: x => x.PedidoId,
+                        principalTable: "Pedidos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_ItensPedido_Produtos_ProdutoId",
                         column: x => x.ProdutoId,
                         principalTable: "Produtos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ItensPedido_PedidoId",
+                table: "ItensPedido",
+                column: "PedidoId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ItensPedido_ProdutoId",
@@ -53,6 +77,9 @@ namespace CasaDoCodigo.Migrations
         {
             migrationBuilder.DropTable(
                 name: "ItensPedido");
+
+            migrationBuilder.DropTable(
+                name: "Pedidos");
 
             migrationBuilder.DropTable(
                 name: "Produtos");
